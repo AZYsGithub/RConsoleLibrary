@@ -213,7 +213,6 @@ RConsoleLib["14"]["MaxTextSize"] = 17;
 RConsoleLib["15"] = Instance.new("UIAspectRatioConstraint", RConsoleLib["Main"]);
 RConsoleLib["15"]["AspectRatio"] = 1.6069246530532837;
 
-
 -- Functions
 -- Window
 local MinSized = nil
@@ -281,7 +280,7 @@ local function CInput(text, color)
 end
 local function CClear()
     for i,v in pairs(RConsoleLib["CmdPrompt"]:GetChildren()) do
-        if v:IsA("TextLabel") then
+        if v:IsA("TextLabel") or v:IsA("TextBox") then
             v:Destroy()
         end
     end
